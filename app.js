@@ -92,10 +92,10 @@ console.log("EXERCISE 2:\n==========\n");
 function dataPlan(planLimit, day, usage){
     var dayTrack = 30 - day;
     var utilization = planLimit - usage;
-    var avgUse = planLimit / 30;
-    var actualUse =  usage / day;
-    var expectedUse = actualUse * 30;
-    var remaining = utilization / dayTrack;
+    var avgUse = (planLimit / 30).toFixed(2);
+    var actualUse =  (usage / day).toFixed(2);
+    var expectedUse = (actualUse * 30).toFixed(2);
+    var remaining = (utilization / dayTrack).toFixed(2);
     console.log(`${day} days utilized, ${dayTrack} days remaining. 
     Average daily use: ${avgUse} GB/day.`)
     if (avgUse > actualUse){
